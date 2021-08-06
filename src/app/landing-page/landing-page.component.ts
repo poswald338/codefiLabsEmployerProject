@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core'
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import * as Rellax from 'rellax'
+import { ChatModalComponent } from './chat-modal/chat-modal.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -14,7 +16,11 @@ export class LandingPageComponent implements OnInit, OnDestroy, AfterViewInit {
     }
     date : Date = new Date()
 
-     constructor() { }
+     constructor(private modalService: NgbModal) {}
+
+     open() {
+       const modalRef = this.modalService.open(ChatModalComponent);
+     }
 
     ngOnInit() {
         const body = document.getElementsByTagName('body')[0]
