@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ShowcaseComponent } from './showcase/showcase.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        AboutComponent,
+        ShowcaseComponent
     ],
     imports: [
         BrowserAnimationsModule,

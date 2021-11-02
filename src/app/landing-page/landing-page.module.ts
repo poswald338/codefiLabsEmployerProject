@@ -7,13 +7,15 @@ import { RouterModule } from '@angular/router';
 
 import { LandingPageComponent } from './landing-page.component';
 import { ChatModalComponent } from './chat-modal/chat-modal.component';
+import { AppRoutingModule } from 'app/app.routing.module';
 
 
 
 @NgModule({
   declarations: [LandingPageComponent, ChatModalComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ]
 })
 export class LandingPageModule { }
