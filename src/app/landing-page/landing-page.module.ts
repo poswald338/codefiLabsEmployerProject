@@ -6,16 +6,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
 import { LandingPageComponent } from './landing-page.component';
-import { ChatModalComponent } from './chat-modal/chat-modal.component';
 import { AppRoutingModule } from 'app/app.routing.module';
+import { ChatModalModule } from 'app/chat-modal/chat-modal.module';
 
 
 
 @NgModule({
-  declarations: [LandingPageComponent, ChatModalComponent],
+  declarations: [LandingPageComponent],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChatModalModule
   ]
 })
 export class LandingPageModule { }

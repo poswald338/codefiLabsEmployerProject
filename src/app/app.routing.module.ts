@@ -3,12 +3,13 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ChatModalComponent } from './landing-page/chat-modal/chat-modal.component';
 import { AboutComponent } from './about/about.component';
+import { ShowcaseComponent } from './showcase/showcase.component';
 
 const routes: Routes = [
     { path: '', component: LandingPageComponent, pathMatch: 'full' },
-    { path: 'about', component: AboutComponent, pathMatch: 'full'}
+    { path: 'about', component: AboutComponent, pathMatch: 'full'},
+    { path: 'projects', component: ShowcaseComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

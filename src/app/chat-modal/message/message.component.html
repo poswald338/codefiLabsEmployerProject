@@ -1,0 +1,9 @@
+<div class="commentArea">
+    <div class="bubbledRight" *ngIf="msg.user === 'web'">
+        <span>{{msg.text}}</span><br>
+        <span class="time">{{msg.timestamp | date:'shortTime'}}</span>
+    </div>
+    <div class="bubbledLeft" *ngIf="msg.user === 'slack'"> 
+        <span>{{msg.text}}</span><br>
+        <span class="time">{{msg.timestamp | date:'shortTime'}}</span>
+    </div>

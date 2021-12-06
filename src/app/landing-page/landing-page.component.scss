@@ -1,8 +1,7 @@
 .bottom {
-    position: absolute;
-    top: 225px;
+    position: fixed;
+    top: 0;
     left: 0;
-    z-index: 3;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.71);
         height: 60px;
         width: 60px;
@@ -11,9 +10,9 @@
         border-radius: 50%;
 }
 
-.bottom2 {
-    position: absolute;
-    top: 225px;
-    left: 0;
-    z-index: 3;
-}
+// .bottom2 {
+//     position: absolute;
+//     top: 225px;
+//     left: 0;
+//     z-index: 3;
+// }

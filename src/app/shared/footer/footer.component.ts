@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendMail() {
+    window.open('mailto:test@example.com');
+  }
+
 }
