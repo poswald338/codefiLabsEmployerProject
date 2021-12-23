@@ -1,0 +1,22 @@
+.grad { text-decoration: transparent;
+  background-image: linear-gradient(#55d6d0, lightgrey);
+}
+
+.routed-nav {
+  background-image: url('../../../assets/img/card-blog3.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.navbar {
+  width: 100%
+}
+nav {
+  position: fixed
+}
+
+@media(min-width: 992px) {
+  .grad {
+    background-image: none;
+  }
+}

@@ -1,7 +1,15 @@
 footer{
-    position:fixed;
 left:0;
 bottom:0;
 width:100%;
-z-index: 2;
+z-index: 0;
+}
+.copyright {
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .copyright {
+        text-align: right;
+    }
 }

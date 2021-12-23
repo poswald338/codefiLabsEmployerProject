@@ -1,22 +1,41 @@
-import { Component, OnInit, ElementRef } from '@angular/core'
+import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core'
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common'
+import { NavigationEnd, Router } from '@angular/router'
+import { Subscription } from 'rxjs'
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   private toggleButton: any
   private sidebarVisible: boolean
+  private subs = new Subscription()
+  home: boolean
 
-  constructor(public location: Location, private element: ElementRef) {
+  constructor(
+    public location: Location, 
+    private element: ElementRef, 
+    private router: Router) {
     this.sidebarVisible = false
   }
 
   ngOnInit() {
     const navbar: HTMLElement = this.element.nativeElement
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0]
+    this.subs.add(
+      this.router.events.subscribe((y: NavigationEnd) => {
+        if(y instanceof NavigationEnd) {
+          if(this.router.url === '/') {
+            this.home = true
+          } else {
+            this.home = false
+          }
+        }
+      })
+    )
+
   }
   sidebarOpen() {
     const toggleButton = this.toggleButton
@@ -62,5 +81,9 @@ export class NavbarComponent implements OnInit {
     else {
       return false
     }
+  }
+
+  ngOnDestroy(): void {
+      this.subs.unsubscribe()
   }
 }

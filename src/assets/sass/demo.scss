@@ -578,7 +578,7 @@
         top: 24%;
 
         .h1-seo{
-            font-size: 14.8em;
+            font-size: 10.8em;
             text-transform: uppercase;
             font-weight: 700;
             font-family: 'Open Sans Condensed', sans-serif;
@@ -1020,7 +1020,7 @@ and (orientation : portrait) {
     }
 
     .landing-page .rellax-text-container .h1-seo{
-        font-size: 10.8em;
+        font-size: 9.3em;
     }
 
     .index-page .rellax-text-container .h1-seo{
@@ -1488,7 +1488,7 @@ and ( orientation : portrait){
     }
 
     .landing-page .rellax-text-container .h1-seo{
-        font-size: 14em;
+        font-size: 14.8em;
     }
 
     .index-page .rellax-text-container .h1-seo{
@@ -1507,6 +1507,12 @@ and ( orientation : portrait){
 .section-images{
     padding-bottom: 0;
     z-index: 2;
+}
+
+@media (min-width: 1200px) {
+    .landing-page .rellax-text-container .h1-seo{
+        font-size: 14.8em;
+    }
 }
 
 // animated images
