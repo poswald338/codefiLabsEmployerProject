@@ -1,14 +1,15 @@
 // modal {
-    .modal {
-        position: fixed; //float
-        z-index: 100;
-        left: 50%;
-        top: 50%;
+    .chat-modal {
+        
+        // position: fixed; //float
+        // z-index: 100;
+        // left: 50%;
+        // top: 50%;
         
         /* Use this for centering if unknown width/height */
-        transform: translate(-50%, 0%);       
+        // transform: translate(-50%, 0%);       
 
-        box-shadow: 0 0 60px 10px rgba(1, 1, 1, 1);
+        // box-shadow: 0 0 60px 10px rgba(1, 1, 1, 1);
       }
 
 // .modal-background {
@@ -60,6 +61,12 @@
     border-color:black; 
     color:white; 
     font-weight: bold;
+}
+img {
+    object-fit: cover;
+    object-position: top;
+    height: 150px;
+    width: 150px;
 }
     // background-color: white; opacity: 0.8;
 

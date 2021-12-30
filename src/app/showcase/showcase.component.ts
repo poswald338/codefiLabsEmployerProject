@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Sites } from './static-sites.model';
 
 @Component({
   selector: 'app-showcase',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showcase.component.scss']
 })
 export class ShowcaseComponent implements OnInit {
+  apps = Sites
 
   constructor() { }
 

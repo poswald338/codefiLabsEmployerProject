@@ -1,15 +1,17 @@
 <div class="container">
-    <div class="col-12">
-        <h1>About Me</h1>
-        <div class="d-inline-flex">
-            <div class="img-container flex">
-                <a href="#">
-                    <img src="../../assets/img/card-blog3.jpg" alt="">
-                </a>
-            </div>
-            <div class="flex ml-4">
-                <h3>CSI Project</h3>
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-12">
+			<h1 class="font-weight-bold">My Stuff</h1>
+		</div>
+		<div class="col-12 mb-5 d-md-inline-flex text-center text-md-left justify-content-center" *ngFor="let app of apps">
+			<div class="desc-container col-5">
+				<h2>{{app.name}}</h2>
+				<a href="https://{{app.url}}"><p>{{app.url}}</p></a>
+				<p>A brief description of the application and the various tasks/features that I implemented. I mainly just want to put a lot of content here to see how it will be displayed to the user.</p>
+			</div>
+			<div class="img-container shadow mb-4 mb-md-0">
+				<img src="{{app.img}}" alt="image">
+			</div>
+		</div>
+	</div>
 </div>

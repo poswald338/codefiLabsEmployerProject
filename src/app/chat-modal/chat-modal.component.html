@@ -1,7 +1,7 @@
 
  <!-- <div class="modal-overlay" id="modal-overlay"></div> -->
-
-<div class="modal-header">
+<div class="chat-modal">
+  <div class="modal-header">
     <h3 class="modal-title">Hi there!</h3>
     <button type="button" class="close" aria-label="Close" (click)="onCloseModal()" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&minus;</span>
@@ -34,52 +34,54 @@
         class="btn btn-info btn-msg-send">Send</button>
       </form>
     </div>
+  </div>
   <!-- <h4 class="modal-title">Hi there!</h4>
   <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
     <span aria-hidden="true">&times;</span>
   </button> -->
-</div>
+
 
 
 <!-- Here is for the initial message submission -->
  <!--Face Design-->
- <div class="modal-body" *ngIf="!session"> 
-    <div style="text-align: center;">
-  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" 
-       class="rounded-circle center">
-    </div>
-<div>
-  <form (ngSubmit)="onSubmitSessionForm(sf)" #sf="ngForm">
+  <div class="modal-body" *ngIf="!session"> 
+      <div style="text-align: center;">
+        <img src="assets/img/profile-img/patrick_oswald.jpg" alt="avatar" 
+        class="rounded-circle center">
+      </div>
+    <div>
+      <form (ngSubmit)="onSubmitSessionForm(sf)" #sf="ngForm">
+        
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="name" 
+            required
+            ngModel
+            name="name">
+        </div>
+        <div class="form-group">
+          <label for="message">Please Type Your Message</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="message" 
+            required
+            ngModel
+            name="message">
+        </div>
+        
+        <button 
+        type="submit" 
+        class="btn btn-info" 
+        [disabled]="!sf.valid" 
+        style="background-color:#c58c8c; border-color:black; color:white; font-weight: bold;">Submit</button>
     
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input 
-        type="text" 
-        class="form-control" 
-        id="name" 
-        required
-        ngModel
-        name="name">
+      </form>
     </div>
-    <div class="form-group">
-      <label for="message">Please Type Your Message</label>
-      <input 
-        type="text" 
-        class="form-control" 
-        id="message" 
-        required
-        ngModel
-        name="message">
-    </div>
-    
-    <button 
-    type="submit" 
-    class="btn btn-info" 
-    [disabled]="!sf.valid" 
-    style="background-color:#c58c8c; border-color:black; color:white; font-weight: bold;">Submit</button>
- 
-  </form>
-</div>
+  </div>
 </div>
 
 
