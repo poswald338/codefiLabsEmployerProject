@@ -13,7 +13,9 @@
 .desc-container{
   max-width: 500px;
 }
-
+a {
+  text-decoration: none;
+}
 
 @media(min-width: 768px) {
   // .img-container {

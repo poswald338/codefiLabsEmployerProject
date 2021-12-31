@@ -10,9 +10,9 @@ export const Sites = [
     url: "codelabs-csi.herokuapp.com"
   },
   {
-    name: "Movie Madness",
-    img: "assets/img/portfolio/ihm-home-2.png",
-    url: "mymovieapp.com"
+    name: "Movie Tracker",
+    img: "assets/img/portfolio/movie-trackerr-home.png",
+    url: "movie-trackerr.herokuapp.com"
   },
 
 ]
